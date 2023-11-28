@@ -3,11 +3,6 @@ nematode <- read.csv("nematode.csv")
 
 fungivorous <- nematode$Fungivorous
 
-Site <- nematode$Site
-
-plot(nematode$Fungivorous, 
-     breaks = 15,
-     col = "red", 
-     xlab = "Site",
-     ylab = "Frequency",
-     main = "Fungivorous Nematodes per Site")
+boxplot(list(Group1 = fungivorous), 
+        main = "Fungivorous Boxplot", 
+        ylab = "Number of Individuals")
